@@ -1,9 +1,13 @@
 let data 
 const API = "https://www.breakingbadapi.com/api/characters"
 async function get(){
-    const response  =await fetch(API)
-      data  = await response.json()
-     printData(data)
+    try{
+        const response  =await fetch(API)
+          data  = await response.json()
+         printData(data)
+    }catch(e){
+        console.log("Error",e.message);
+    }
     }
 
 

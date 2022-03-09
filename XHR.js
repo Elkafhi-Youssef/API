@@ -8,9 +8,14 @@
  PUT :Update data
  Delete :Delete data
  */
- request.open('GET','http://jsonplaceholder.typicode.com/posts',true)
+const post ={
+    title:'New post',
+    body:'Post body',
+    userId:20
+}
+ request.open('POST','http://jsonplaceholder.typicode.com/posts',true)
 //  3 param just for do anything sync or async 
-
+request.setRequestHeader('Content-type','application/json')
 const posts =  document.querySelector('#posts')
 request.onload =  function (){
     const data = JSON.parse(this.responseText)
@@ -30,5 +35,5 @@ request.onload =  function (){
     console.log(data)
     
 }
-request.send()
+request.send(JSON.stringify(post))
 

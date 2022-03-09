@@ -14,13 +14,27 @@ btn1.onclick = async()=>{
     if (response.status === 200) {
         let data = await response.json();
         adder(data.args.val)
-        
     }
-  
+    
 }
+btn2.onclick =()=>{
+    const val = myInput.value;
+    const fd = new FormData();
+    fd.append('val',val)
+    fd.append('id',1)
+    fetch(url2,{
+        method:'POST',
+        body:fd
+    }
+    ).then((response)=>response.json())
+    .then((data)=>{
+        console.log(data.form)
+        adder(`POST${data.form.val}`)
+    })
 
+}
 function adder(html){
     const div  = document.createElement('div')
-    div.innerHTML=`${html}hi`
+    div.innerHTML=`${html}`
         main.append(div)
-}
+    }

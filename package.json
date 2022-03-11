@@ -1,0 +1,23 @@
+{
+  "name": "ipa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elkafhi-Youssef/ipa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elkafhi-Youssef/ipa/issues"
+  },
+  "homepage": "https://github.com/Elkafhi-Youssef/ipa#readme",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}

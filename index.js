@@ -1,4 +1,5 @@
 let postForm = document.querySelector('.postForm')
+let btnget = document.querySelector('.btnget')
 
 postForm.addEventListener('submit',(form)=>{
     form.preventDefault();
@@ -14,3 +15,9 @@ postForm.addEventListener('submit',(form)=>{
     })
     .then(data=> console.log(data))
 } ) 
+btnget.addEventListener('click',async(e)=>{
+    e.preventDefault();
+    let response =await fetch("http://localhost/ipa/read.php")
+    let data = await response.json()
+    console.log(data.data[1])
+} )

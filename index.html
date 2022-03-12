@@ -7,16 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="content">
-        <div id="select">
-            <select onchange="getch(this.value)">
-            </select>
+    <form class="postForm" action="">
+        <div>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
         </div>
-        <img style="width: 20rem;height: 20rem;" src="" alt="">
-
-
+        <div>
+            <label for="content">Content</label>
+            <input type="text" name="content" id="title">
+        </div>
         
-    </div>
-    <script src="main.js"></script>
+           <button type="submit">submit</button> 
+           
+        
+    </form>
+    <script src="index.js"></script>
 </body>
-</html>  
+</html>

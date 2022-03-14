@@ -9,15 +9,15 @@
      
     $con = new PDO("mysql:host=$test_host;dbname=$test_bd",$test_username,$test_password);
   
-//   echo "Connected successfully*************************";
+  echo "Connected successfully*************************";
 } catch(PDOException $e) {
   echo "Connection failed****************************: " . $e->getMessage();
 }
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: * ");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Access-Control-Allow-Headers:*");
  $data = $con->prepare("SELECT * from post");
  
  $data->execute();

@@ -5,6 +5,7 @@ $passwd = '';
 $dbname = 'posts';
 try {
     $con = new mysqli($servername,$username,$passwd,$dbname);
+    echo'donne';
 } catch (Exception $e) {
     die("Opps something went wrong...");
 }

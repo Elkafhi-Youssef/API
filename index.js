@@ -7,7 +7,7 @@ postForm.addEventListener('submit',(form)=>{
 
     // let values = [...formData.entries()]
     // console.log(values);
-        fetch("http://localhost/ipa/add.php",{
+        fetch("http://localhost/API/add.php",{
         method:"POST",
         body:formData
     }).then((response)=> {
@@ -17,7 +17,7 @@ postForm.addEventListener('submit',(form)=>{
 } ) 
 btnget.addEventListener('click',async(e)=>{
     e.preventDefault();
-    let response =await fetch("http://localhost/ipa/read.php")
+    let response =await fetch("http://localhost/API/read.php")
     let data = await response.json()
     console.log(data.data[1])
 } )
